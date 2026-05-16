@@ -4,7 +4,6 @@ import { StorySection } from '../components/story/StorySection';
 import { ProgrammeSection } from '../components/programme/ProgrammeSection';
 import { TeamSection } from '../components/team/TeamSection';
 import { PhotoGallery } from '../components/gallery/PhotoGallery';
-import { VideoGallery } from '../components/videos/VideoGallery';
 import { LinksSection } from '../components/links/LinksSection';
 import { SubscribeSection } from '../components/subscribe/SubscribeSection';
 
