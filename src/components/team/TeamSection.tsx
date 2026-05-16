@@ -75,7 +75,7 @@ export const TeamSection: React.FC = () => {
                   alt={photo.alt}
                   style={{
                     width: '100%',
-                    height: 320,
+                    height: 600,
                     objectFit: 'cover',
                     objectPosition: 'center top',
                     display: 'block',
