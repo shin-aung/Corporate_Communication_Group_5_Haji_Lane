@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 interface NavLink {
   id: string;
   label: string;
+  path?: string;
 }
 
 const NAV_LINKS: NavLink[] = [
@@ -10,8 +11,7 @@ const NAV_LINKS: NavLink[] = [
   { id: 'story', label: 'Story' },
   { id: 'programme', label: 'Programme' },
   { id: 'about', label: 'Team' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'videos', label: 'Videos' },
+  { id: 'gallery',   label: 'Gallery', path: '/gallery' },
   { id: 'links', label: 'Links' },
   { id: 'subscribe', label: 'Subscribe' },
 ];

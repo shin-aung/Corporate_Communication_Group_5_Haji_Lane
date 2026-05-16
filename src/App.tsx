@@ -4,17 +4,45 @@ import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { BackToTop } from './components/layout/BackToTop';
 import HomePage from './pages/HomePage';
+import GalleryPage from './pages/GalleryPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const App: React.FC = () => (
   <BrowserRouter>
-    <Header />
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route
+        path="/"
+        element={
+          <>
+            <Header />
+            <HomePage />
+            <Footer />
+            <BackToTop />
+          </>
+        }
+      />
+      <Route
+        path="/gallery"
+        element={
+          <>
+            <Header />
+            <GalleryPage />
+            <Footer />
+            <BackToTop />
+          </>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <>
+            <Header />
+            <NotFoundPage />
+            <Footer />
+          </>
+        }
+      />
     </Routes>
-    <Footer />
-    <BackToTop />
   </BrowserRouter>
 );
 
