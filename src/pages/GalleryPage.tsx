@@ -76,39 +76,39 @@ const navBtnStyle = (side: 'left' | 'right'): React.CSSProperties => ({
 });
 
 // ── VideoCard ─────────────────────────────────────────────────────────────────
-interface VideoCardProps {
-  title: string;
-  description?: string;
-  embedSrc: string;
-}
+// interface VideoCardProps {
+//   title: string;
+//   description?: string;
+//   embedSrc: string;
+// }
 
-const VideoCard: React.FC<VideoCardProps> = ({ title, description, embedSrc }) => {
-  const [playing, setPlaying] = useState(false);
+// const VideoCard: React.FC<VideoCardProps> = ({ title, description, embedSrc }) => {
+//   const [playing, setPlaying] = useState(false);
 
-  return (
-    <div className="card-hover" style={{ background: 'var(--color-paper)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid rgba(164,75,42,0.12)', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ position: 'relative', aspectRatio: '16/9', background: '#0E0606', overflow: 'hidden' }}>
-        {playing ? (
-          <iframe src={embedSrc} title={title} allow="autoplay" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }} />
-        ) : (
-          <button onClick={() => setPlaying(true)} aria-label={`Play ${title}`} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', background: 'linear-gradient(135deg, #3A0F0D 0%, #160807 100%)', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: 0 }}>
-            <div aria-hidden="true" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 14, background: 'repeating-linear-gradient(90deg, rgba(164,75,42,0.4) 0px, rgba(164,75,42,0.4) 10px, transparent 10px, transparent 20px)' }} />
-            <div aria-hidden="true" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 14, background: 'repeating-linear-gradient(90deg, rgba(164,75,42,0.4) 0px, rgba(164,75,42,0.4) 10px, transparent 10px, transparent 20px)' }} />
-            <div style={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(164,75,42,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid rgba(255,255,255,0.25)', boxShadow: '0 4px 20px rgba(164,75,42,0.5)', fontSize: 22, paddingLeft: 4, color: '#FFFEF8' }}>▶</div>
-            <span style={{ color: 'rgba(246,240,232,0.65)', fontSize: 12, fontWeight: 600, letterSpacing: 0.5, fontFamily: 'var(--font-sans)' }}>Click to play</span>
-          </button>
-        )}
-      </div>
-      <div style={{ padding: '16px 20px 20px', flex: 1 }}>
-        <h4 className="font-serif" style={{ fontSize: 16, fontWeight: 700, color: 'var(--color-maroon)', marginBottom: 6 }}>{title}</h4>
-        {description && <p style={{ color: 'var(--color-muted)', fontSize: 13, lineHeight: 1.6 }}>{description}</p>}
-        {playing && (
-          <button onClick={() => setPlaying(false)} style={{ marginTop: 12, background: 'none', border: '1px solid rgba(164,75,42,0.3)', color: 'var(--color-copper)', fontSize: 12, fontWeight: 600, padding: '5px 14px', borderRadius: 100, cursor: 'pointer', fontFamily: 'var(--font-sans)' }}>⏹ Stop</button>
-        )}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="card-hover" style={{ background: 'var(--color-paper)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid rgba(164,75,42,0.12)', display: 'flex', flexDirection: 'column' }}>
+//       <div style={{ position: 'relative', aspectRatio: '16/9', background: '#0E0606', overflow: 'hidden' }}>
+//         {playing ? (
+//           <iframe src={embedSrc} title={title} allow="autoplay" allowFullScreen style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }} />
+//         ) : (
+//           <button onClick={() => setPlaying(true)} aria-label={`Play ${title}`} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', background: 'linear-gradient(135deg, #3A0F0D 0%, #160807 100%)', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: 0 }}>
+//             <div aria-hidden="true" style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 14, background: 'repeating-linear-gradient(90deg, rgba(164,75,42,0.4) 0px, rgba(164,75,42,0.4) 10px, transparent 10px, transparent 20px)' }} />
+//             <div aria-hidden="true" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 14, background: 'repeating-linear-gradient(90deg, rgba(164,75,42,0.4) 0px, rgba(164,75,42,0.4) 10px, transparent 10px, transparent 20px)' }} />
+//             <div style={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(164,75,42,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid rgba(255,255,255,0.25)', boxShadow: '0 4px 20px rgba(164,75,42,0.5)', fontSize: 22, paddingLeft: 4, color: '#FFFEF8' }}>▶</div>
+//             <span style={{ color: 'rgba(246,240,232,0.65)', fontSize: 12, fontWeight: 600, letterSpacing: 0.5, fontFamily: 'var(--font-sans)' }}>Click to play</span>
+//           </button>
+//         )}
+//       </div>
+//       <div style={{ padding: '16px 20px 20px', flex: 1 }}>
+//         <h4 className="font-serif" style={{ fontSize: 16, fontWeight: 700, color: 'var(--color-maroon)', marginBottom: 6 }}>{title}</h4>
+//         {description && <p style={{ color: 'var(--color-muted)', fontSize: 13, lineHeight: 1.6 }}>{description}</p>}
+//         {playing && (
+//           <button onClick={() => setPlaying(false)} style={{ marginTop: 12, background: 'none', border: '1px solid rgba(164,75,42,0.3)', color: 'var(--color-copper)', fontSize: 12, fontWeight: 600, padding: '5px 14px', borderRadius: 100, cursor: 'pointer', fontFamily: 'var(--font-sans)' }}>⏹ Stop</button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
 
 // ── GalleryPage ───────────────────────────────────────────────────────────────
 type ActiveTab = 'photos' 
