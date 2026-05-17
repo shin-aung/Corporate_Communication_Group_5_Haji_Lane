@@ -290,18 +290,6 @@ export const PhotoGallery: React.FC = () => {
   // Only show the first N images on the home page
   const preview = galleryImages.slice(0, HOME_PREVIEW_LIMIT);
   const hasMore = galleryImages.length > HOME_PREVIEW_LIMIT;
-  const [isPhone, setIsPhone] = useState(false);
-
-  React.useEffect(() => {
-    const checkPhoneSize = () => {
-      setIsPhone(window.innerWidth <= 768);
-    };
-
-    checkPhoneSize();
-    window.addEventListener("resize", checkPhoneSize);
-
-    return () => window.removeEventListener("resize", checkPhoneSize);
-  }, []);
 
   const closeLightbox = () => setLightboxIndex(null);
   const goPrev = () =>
