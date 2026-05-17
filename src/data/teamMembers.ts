@@ -37,7 +37,9 @@ export const teamMembers: TeamMember[] = [
       '"Progress, not perfection." Stay kind, stay curious, keep growing.',
       'I don\'t chase motivation. I build discipline and let purpose lead the way.',
     ],
-    links: [],
+    links: [
+      { label: 'Shin Thant Aung Professional Profile', url: 'https://shin-thant-aung-portfolio.vercel.app', type: 'achievement' },
+    ],
   },
   {
     id: 'su-sandy-myint',
@@ -66,7 +68,9 @@ export const teamMembers: TeamMember[] = [
       'Strengthen both technical and business skills',
       'Build a meaningful career',
     ],
-    links: [],
+    links: [
+      { label: 'Su Sandy Myint Professional Profile', url: 'https://su-sandy-myint-portfolio.vercel.app', type: 'achievement' },
+    ],
   },
   {
     id: 'shweta',
