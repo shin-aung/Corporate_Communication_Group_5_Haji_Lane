@@ -8,7 +8,7 @@ const ProgrammePage: React.FC = () => {
     <div
       style={{
         width: "100vw",
-        height: "115vh",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -18,16 +18,27 @@ const ProgrammePage: React.FC = () => {
         boxSizing: "border-box",
       }}
     >
-      <img
-        src="/media/images/gallery/programme_schedule.jpeg"
-        alt="Programme"
-        style={{
-          width: "90vw",
-          height: "85vh",
-          objectFit: "contain",
-          display: "block",
-        }}
-      />
+      <picture>
+        {/* Phone image */}
+        <source
+          media="(max-width: 768px)"
+          srcSet="/media/images/gallery/programme_schedule_phone.jpeg"
+        />
+
+        {/* PC image */}
+        <img
+          src="/media/images/gallery/programme_schedule_pc.jpeg"
+          alt="Programme Schedule"
+          style={{
+            marginTop: "10vh",
+            width: "90vw",
+            maxHeight: "85vh",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </picture>
+
       <button
         onClick={() => navigate("/")}
         style={{
