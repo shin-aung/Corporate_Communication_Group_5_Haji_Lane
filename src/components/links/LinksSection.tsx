@@ -2,7 +2,6 @@ import React from "react";
 import { teamMembers } from "../../data/teamMembers";
 import { RevealSection } from "../common/RevealSection";
 import { SectionBadge } from "../common/SectionBadge";
-import { QRCode } from "../common/QRCode";
 
 export const LinksSection: React.FC = () => (
   <section
@@ -103,7 +102,20 @@ export const LinksSection: React.FC = () => (
                       fontSize: 13,
                       fontWeight: 600,
                       marginBottom: 8,
-                      transition: "background 0.2s",
+                      transition: "all 0.25s ease",
+                      textDecoration: "none",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "rgba(164,75,42,0.35)";
+                      e.currentTarget.style.transform = "translateY(-3px)";
+                      e.currentTarget.style.boxShadow =
+                        "0 8px 20px rgba(0,0,0,0.18)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "rgba(164,75,42,0.18)";
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "none";
                     }}
                   >
                     <div
@@ -116,14 +128,18 @@ export const LinksSection: React.FC = () => (
                         display: "inline-flex",
                       }}
                     >
-                      <QRCode
-                        value={link.url}
-                        size={160}
-                        fgColor="#160807"
-                        bgColor="#FFFFFF"
-                        quietZone={2}
+                      <img
+                        src={member.qrCodeSrc}
+                        alt={`${member.shortName} QR Code`}
+                        style={{
+                          width: 140,
+                          height: 140,
+                          objectFit: "contain",
+                        }}
                       />
                     </div>
+
+                    <div style={{ marginTop: 8 }}>{link.label}</div>
                   </a>
                 ))
               ) : (

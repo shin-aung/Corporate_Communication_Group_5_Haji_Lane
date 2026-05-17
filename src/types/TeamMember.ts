@@ -28,5 +28,6 @@ export interface TeamMember {
   goals?: string[];
   tools?: string[];
   links: SocialLink[];
+  qrCodeSrc?: string;
   isPending?: boolean;
 }

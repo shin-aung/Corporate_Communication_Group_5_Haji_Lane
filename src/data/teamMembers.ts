@@ -40,6 +40,7 @@ export const teamMembers: TeamMember[] = [
     links: [
       { label: 'Shin Thant Aung Professional Profile', url: 'https://shin-thant-aung-portfolio.vercel.app', type: 'achievement' },
     ],
+    qrCodeSrc: '/media/images/portfolio-qr/shin-portfolio-qr.png',
   },
   {
     id: 'su-sandy-myint',
@@ -71,6 +72,7 @@ export const teamMembers: TeamMember[] = [
     links: [
       { label: 'Su Sandy Myint Professional Profile', url: 'https://su-sandy-myint-portfolio.vercel.app', type: 'achievement' },
     ],
+    qrCodeSrc: '/media/images/portfolio-qr/sandy-portfolio-qr.png',
   },
   {
     id: 'shweta',
@@ -101,6 +103,7 @@ export const teamMembers: TeamMember[] = [
     links: [
       { label: 'Shweta Professional Profile', url: 'https://drive.google.com/file/d/12x34jBBhQoNMOxkIQftiGFxv57c8_VDV/view?usp=sharing', type: 'achievement' },
     ],
+    qrCodeSrc: '/media/images/portfolio-qr/shweta-portfolio-qr.png',
   },
   {
     id: 'sathya-ravindra',
@@ -127,6 +130,7 @@ export const teamMembers: TeamMember[] = [
     links: [
       { label: 'Sathya Ravindra Professional Profile', url: 'https://brand.site/SathyaRavindra', type: 'achievement' },
     ],
+    qrCodeSrc: '/media/images/portfolio-qr/sathya-portfolio-qr.png',
   },
   {
     id: 'aung-min-thant',
