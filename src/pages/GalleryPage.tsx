@@ -7,19 +7,17 @@ import { RevealSection } from '../components/common/RevealSection';
 import { SectionBadge } from '../components/common/SectionBadge';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
-type FilterCategory = 'All' | 'Haji Lane' | 'Group Photos' | 'History';
+type FilterCategory = 'All' | 'Haji Lane' | 'History';
 
 const FILTER_CATEGORIES: FilterCategory[] = [
   'All',
   'Haji Lane',
-  'Group Photos',
   'History',
 ];
 
 const CATEGORY_MAP: Record<FilterCategory, string> = {
   'All': 'all',
   'Haji Lane': 'haji-lane',
-  'Group Photos': 'group',
   'History': 'history',
 };
 
@@ -113,7 +111,9 @@ const VideoCard: React.FC<VideoCardProps> = ({ title, description, embedSrc }) =
 };
 
 // ── GalleryPage ───────────────────────────────────────────────────────────────
-type ActiveTab = 'photos' | 'videos';
+type ActiveTab = 'photos' 
+// | 'videos'
+;
 
 const GalleryPage: React.FC = () => {
   const navigate = useNavigate();
@@ -168,7 +168,7 @@ const GalleryPage: React.FC = () => {
             <div style={{ display: 'flex', gap: 32, justifyContent: 'center', marginTop: 28 }}>
               {[
                 { value: galleryImages.length, label: 'Photos' },
-                { value: galleryVideos.length, label: 'Videos' },
+                // { value: galleryVideos.length, label: 'Videos' },
               ].map((stat) => (
                 <div key={stat.label} style={{ textAlign: 'center' }}>
                   <div className="font-serif" style={{ fontSize: 32, fontWeight: 900, color: '#A44B2A', lineHeight: 1 }}>{stat.value}</div>
@@ -183,7 +183,7 @@ const GalleryPage: React.FC = () => {
       {/* ── Tab Switcher ────────────────────────────────────────────── */}
       <div style={{ borderBottom: '1px solid rgba(164,75,42,0.2)', background: '#160807', position: 'sticky', top: 64, zIndex: 50 }}>
         <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 24px', display: 'flex', gap: 0 }}>
-          {(['photos', 'videos'] as ActiveTab[]).map((tab) => (
+          {(['photos'] as ActiveTab[]).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -254,7 +254,7 @@ const GalleryPage: React.FC = () => {
       )}
 
       {/* ── Videos Tab ─────────────────────────────────────────────── */}
-      {activeTab === 'videos' && (
+      {/* {activeTab === 'videos' && (
         <div style={{ padding: '48px 24px 80px' }}>
           <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto' }}>
             {galleryVideos.length > 0 ? (
@@ -272,7 +272,7 @@ const GalleryPage: React.FC = () => {
             )}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Lightbox */}
       {lightboxIndex !== null && filtered[lightboxIndex] && (
