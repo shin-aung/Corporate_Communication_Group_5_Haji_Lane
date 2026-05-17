@@ -6,6 +6,7 @@ import { BackToTop } from './components/layout/BackToTop';
 import HomePage from './pages/HomePage';
 import GalleryPage from './pages/GalleryPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ProgrammePage from './pages/Programme';
 
 const App: React.FC = () => (
   <BrowserRouter>
@@ -27,6 +28,17 @@ const App: React.FC = () => (
           <>
             <Header />
             <GalleryPage />
+            <Footer />
+            <BackToTop />
+          </>
+        }
+      />
+      <Route
+        path="/programme"
+        element={
+          <>
+            <Header />
+            <ProgrammePage />
             <Footer />
             <BackToTop />
           </>
