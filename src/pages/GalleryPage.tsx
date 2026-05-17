@@ -7,14 +7,13 @@ import { RevealSection } from '../components/common/RevealSection';
 import { SectionBadge } from '../components/common/SectionBadge';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
-type FilterCategory = 'All' | 'Haji Lane' | 'Group Photos' | 'History' | 'Behind the Scenes';
+type FilterCategory = 'All' | 'Haji Lane' | 'Group Photos' | 'History';
 
 const FILTER_CATEGORIES: FilterCategory[] = [
   'All',
   'Haji Lane',
   'Group Photos',
   'History',
-  'Behind the Scenes',
 ];
 
 const CATEGORY_MAP: Record<FilterCategory, string> = {
@@ -22,7 +21,6 @@ const CATEGORY_MAP: Record<FilterCategory, string> = {
   'Haji Lane': 'haji-lane',
   'Group Photos': 'group',
   'History': 'history',
-  'Behind the Scenes': 'behind-the-scenes',
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
