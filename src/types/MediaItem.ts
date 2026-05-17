@@ -2,7 +2,7 @@ export type MediaCategory =
   | 'cover'
   | 'haji-lane'
   | 'group'
-  | 'activity'
+  | 'history'
   | 'profile'
   | 'behind-the-scenes';
 

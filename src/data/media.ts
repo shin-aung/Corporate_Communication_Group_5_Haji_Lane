@@ -88,13 +88,14 @@ export const galleryImages: ImageItem[] = [
     category: "group",
     caption: "Sandy and Aung",
   },
-  // {
-  //   id: "img-009",
-  //   src: "https://drive.google.com/thumbnail?id=1osqRWU2fksNp7vVIwcCZukIDz9Wckvoq&sz=s1600",
-  //   alt: "Outdoor activity",
-  //   category: "activity",
-  //   caption: "Exploring the outdoor spaces",
-  // },
+  {
+    id: "img-009",
+    src: "https://drive.google.com/thumbnail?id=1AlJ2mYhg6-RhgG6olrbPD6v8ryEynFUs&sz=s1600",
+    alt: "History of Haji Lane (2023)",
+    category: "history",
+    caption:
+      "History of Haji Lane, from a 2023 article in The Straits Times (photo by The Straits Times/Roslan Rahman)",
+  },
   {
     id: "img-010",
     src: "https://drive.google.com/thumbnail?id=1Kf0eh1_6supcZNyKpvvB35j8Gsqddv7D&sz=s1600",
@@ -228,6 +229,14 @@ export const galleryImages: ImageItem[] = [
     category: "haji-lane",
     caption: "Turkish store in Haji Lane",
   },
+  {
+    id: "img-029",
+    src: "https://drive.google.com/thumbnail?id=1BJmdAeNkvhKwdwKz4Co5BXHU_Tb_UgRY&sz=s1600",
+    alt: "History of Haji Lane (2023)",
+    category: "history",
+    caption:
+      "History of Haji Lane, from a 2023 article in The Straits Times (photo by The Straits Times/Roslan Rahman)",
+  },
 ];
 
 // -----------------------------------------------------------------------------
@@ -240,7 +249,7 @@ export const galleryVideos: VideoItem[] = [
     id: "vid-001",
     embedSrc: "https://drive.google.com/file/d/REPLACE_WITH_FILE_ID/preview",
     title: "Outdoor Activity Highlights",
-    category: "activity",
+    category: "history",
     description: "Main activity video from the day at Haji Lane",
   },
   {
