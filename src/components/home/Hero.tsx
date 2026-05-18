@@ -226,7 +226,7 @@ export const Hero: React.FC = () => {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
             <Button label="View Activities" onClick={() => scrollTo('programme')} variant="primary" />
             <Button label="Meet the Team"  onClick={() => scrollTo('about')}     variant="outline" />
-            <Button label="Watch Videos"   onClick={() => scrollTo('videos')}    variant="outline" />
+            {/* <Button label="Watch Videos"   onClick={() => scrollTo('videos')}    variant="outline" /> */}
           </div>
         </div>
       </div>
